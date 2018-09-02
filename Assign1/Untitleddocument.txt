@@ -1,0 +1,10 @@
+﻿TABLES require to represent the data:
+Student(Name,Roll Number,Address,Department)
+Course(Course ID, Course Name)
+Examination(Course ID,Exam Type,Date, Full Marks)
+Registration(Roll number, Course ID)
+Gradecard(Grade,Marks,Course ID, Roll number)
+Teacher(Teacher ID,Teacher Name, Department)
+Teaches(Teacher ID,Course ID,Slot ID, Room Number)
+Timing(Slot ID,Day,Start time,End time)
+ClassRoom(Room number,Class capacity)

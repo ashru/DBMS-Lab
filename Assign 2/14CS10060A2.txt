@@ -1,0 +1,59 @@
+Name:Ashrujit Ghoshal
+Roll No:14CS10060
+Assignment 2 
+
+DBMS queries fired from a Programming language
+____________________________________________
+
+Language used -- python
+
+Dependencies -- pymysql
+
+The code is written in Python. It uses the package MySQLdb which can be installed by sudo pip install MySQLdb
+
+The code uses the database on my server account(database name:14CS10060,Password:Btech14)
+
+I have commented out codes for creating tables and inserting values as those are done already in my database. In case tables are not present, those codes can be uncommented.
+
+To run the code ,just type: python 14CS10060A2.py
+
+
+Steps for establishing connection and firing queries:
+_____________________________________________________
+
+1) Establishing connection:
+______________________________
+
+We use the following command to establish a connection with the database
+db = pymysql.connect("10.5.18.102","14CS10060","btech14","14CS10060")
+
+1st argument-location address 
+2nd argument -username
+3rd argument -password
+4th argument - name of the database
+There may be a 5th argument that specifies the return type of the query.By default it returns a tuple.
+
+
+The above command establishes a connection and throws an exception in case the database cannot be connected for issues like network unreachable or due to wrong username, password or database name.
+
+2) Declaring a query:
+________________________
+Query is a simple string.
+for example, query = 'select * from student'
+
+3) Declaring a cursor :
+_________________________
+In order to execute a query we need a cursor object.
+Declared as, c = db.cursor()    (where, db is the connection object)
+
+4) Executing query:
+__________________
+The cursor declared above is used to execute a query.
+c.execute(query)
+
+5) Fetching results:
+______________________________________
+To retrieve data we use the fetchall() method.
+result = c.fetchall()
+
+It stores the tuples  and are printed just as in mysql.

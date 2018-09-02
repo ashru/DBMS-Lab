@@ -1,0 +1,12 @@
+<!--{% for order_id, name, address, status in order.iteritems() %}
+<tr>
+	<td> {{ data[0] }}  </td>
+   	<td> {{ data[1] }}  </td>
+	<td> {{ data[2] }}  </td>
+	<td> {{ data[3] }}  <br>
+    	<div class="boxco"> 
+	<a href="http://www.w3schools.com">Cancel Order</a>
+	</div>
+    </td>   
+</tr>
+{% endfor %}-->
